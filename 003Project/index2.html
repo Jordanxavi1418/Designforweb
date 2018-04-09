@@ -1,0 +1,270 @@
+<html>
+	<head>
+		<title>Audio Test2</title>
+
+
+	</head>
+	<body>
+          
+
+          
+
+               
+
+                <div class="Velo">
+                        <audio controls>
+                           
+                   <source src="Velocidade.mp3" type="audio/mpeg"></audio>
+                    </div>
+                   
+                    <div class="Velo1">
+                    <audio controls>
+                    <source src="Knuckleheads.mp3" type="audio/mpeg">
+                        </audio>
+                        </div>
+
+                        <div class="Velo2">
+                        <audio controls>
+                         <source src="Binladen.mp3" type="audio/mpeg">
+                            </audio>
+                            </div>
+
+
+                            <div class="Velo3">
+                            <audio controls>
+                             <source src="Briq.mp3" type="audio/mpeg">
+                                 </audio>
+                             </div>
+
+            
+                  
+               
+
+        <div class="Soccerball">
+            <img src="images/globo.png" alt="" height="500" width="700">
+        </div>
+
+        <div class="Newbalance">
+            <img src="images/NB.png" alt="" height="400" width="600">
+        </div>
+
+        <div class="Watermelon">
+            <img src="images/Water.png" alt="" height="500" width="400">
+        </div>
+        <div class="inwhite">
+                <img src="images/whitet.png">
+            </div>
+			<!--<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/6WQj2iZpTEo?rel=0&amp;autoplay=1&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>-->
+            <video autoplay muted loop id="Sway">
+                    <source src="Sway.mp4" type="video/mp4">
+                  </video>
+
+             <video autoplay muted loop id="globo">
+                     <source src="globo.mp4" type="video/mp4">
+                </video>
+
+
+                <p>!!!Hover Here!!!</p>
+
+                <div id="axis">
+                    <img class="move-right" src="images/Karol.png" alt="" height="200" width="200" />
+                    <img class="move-left" src="images/kswift.png" alt="" height="500" width="800" />
+                </div>
+
+              
+
+            <style>
+                #Sway {
+                    position: fixed;
+                    right: 0;
+                    bottom: 0;
+               
+                    z-index: -100;
+                    min-width: 100%; 
+                    min-height: 100%;
+                }
+            
+
+               #Globo {
+                    position: fixed;
+                    right: -9%;
+                    bottom: -7%;
+                    z-index: -30;
+                    max-width: 74% ;
+                    max-height: 74% ;
+                    opacity: 0.8;
+                }
+            
+
+            .Soccerball{
+                position: absolute;
+                top: -30%;
+                right: 0%;
+
+            }
+
+             a:hover.Soccerball{
+                position: absolute;
+                top:0%;
+                right: 0%;
+                max-height: 60%;
+                max-width: 60%;
+
+            }
+            
+            .Newbalance{
+                position: fixed;
+               top: -10%;
+               right: 27%;
+                -ms-transform: rotate(20deg); /* IE 9 */
+               -webkit-transform: rotate(20deg); /* Safari */
+                transform: rotate(20deg);
+                z-index: -2;
+                opacity: 0.3;
+
+            }
+
+            .Watermelon{
+
+                position: absolute;
+                bottom: -30%;
+                right: 0%;
+            
+            }
+            
+            .inwhite{
+                position: absolute;
+                max-width: 600%;
+                max-height: 500%;
+                bottom: -103%;
+                left: -30%;
+
+
+            }   
+            
+            body{
+                background-color: aqua;
+            }
+
+            .Velo{
+              
+                max-height: 1000%;
+                max-width: 2000%;
+
+            }
+            
+            .Velo1{
+                position: absolute;
+                top: 30%;
+                left: 20%;
+                ms-transform: rotate(90deg); /* IE 9 */
+              -webkit-transform: rotate(90deg); /* Safari 3-8 */
+             transform: rotate(90deg);
+             opacity: 0.8;
+           
+            }
+
+            .Velo2{
+                position: absolute;
+                top: 30%;
+                right: 10%;
+                z-index: 1;
+                opacity: 0.3;
+            }
+
+            .Velo3{
+                position: absolute;
+                top: 40%;
+               left: 20%;
+               z-index: -3;
+            }
+            
+
+
+
+
+            #axis {
+                background-image:  url(dobrasil.gif);
+               
+                position: fixed;
+                top: 25%;
+                left: 44%;
+                width: 40%;
+                height: 60%;
+                z-index: 300;
+              
+            }
+
+            #axis img {
+                float: left;
+                transition: all .2s ease-in;
+                -webkit-transition: all .2s ease-in;
+                -moz-transition: all .2s ease-in;
+                -o-transition: all .2s ease-in;
+            }
+
+            #axis .move-left {
+                transform: translateX( 900px);
+                -webkit-transform: translateX( 900px);
+                -o-transform: translateX( 900px);
+                -moz-transform: translateX( 900px);
+               
+            }
+
+            #axis .move-right {
+                transform: translateX(-900px);
+                -webkit-transform: translateX(-900px);
+                -o-transform: translateX(-900px);
+                -moz-transform: translateX(-900px);
+                
+            }
+
+
+
+            #axis:hover .move-left, #axis:hover .move-right {
+                transform: translateX(20px);
+                -webkit-transform: translateX(0);
+                -o-transform: translateX(0);
+                -moz-transform: translateX(0);
+            }
+
+            p {
+                font-weight:bold;
+            }
+            
+           
+
+            </style>
+
+
+
+
+
+        <script>
+                var video = document.getElementById("myVideo");
+                var btn = document.getElementById("myBtn");
+                
+                function myFunction() {
+                if (video.paused) {
+                    video.play();
+                    btn.innerHTML = "Pause";
+                } else {
+                    video.pause();
+                    btn.innerHTML = "Play";
+                }
+                }     
+        </script>
+
+
+        <script src="https://code.jquery.com/jquery-2.2.0.js"></script>
+        <script src="audioPlayer.js"></script>
+        <script>
+            // loads the audio player
+            audioPlayer();
+        </script>
+
+
+
+	</body>
+</html>
+    
